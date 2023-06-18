@@ -2,12 +2,74 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon type="image/svg+xml" href="./public/Logo (1).svg"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Takeaway-deliver</title>
+    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+    <!-- Header Start  -->
+    <header>
+      <div class="notification">
+        <p>We're open and available for takeaway & delivery. <samp class="notification-span">Order Now</samp><p/>
+      </div>
+      <nav>
+        <div id="nav-bar">
+          <div id="logo-container">
+            <img src="./public/Logo.png" id="logo" />
+          </div>
+          <ul id="nav-container">
+            <li class="nav-link"><a href="#">Home</a></li>
+            <li class="nav-link"><a href="#">Order</a></li>
+            <li class="nav-link"><a href="#">Company</a></li>
+            <li class="nav-link"><a href="#">FAQ</a></li>
+            <li class="nav-link"><a href="#">Contact</a></li>
+        </ul>
+        <div id="cart-conatiner">
+          <img src="./public/cart.png" id="cart-logo" />
+          <div id="cart-value">
+            <span>
+              0
+            </span>
+          </div>
+        </div>
+      </div>
+      </nav>
+    </header>
+    <!-- Header End -->
+    <!-- Hero Section  Start -->
+    <section id="hero-section">
+      <div id="hero-container">
+        <div id="hero-content">
+          <h1>Beautiful food & takeaway, <span>delivered</span> to your door.</h1>
+          <p class="detail">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+          <div id="PlaceanOrder-btn">
+            <button >Place an Order</button>
+          </div>
+          <div id="reating-card">
+            <img  src="./public/star.png"/>
+            <p class="reating">4.8 out of 5<span class="review">based on 2000+ reviews</span></p>
+          </div>
+        </div>
+        <div id="hero-img">
+            <img src="./public/hero--content.png"/>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section  End -->
+    <section class="about-section">
+      <div class="about-content">
+        <h2>The home of</h2>
+        <h2>fresh products</h2>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+        <div class="abot-btn-container">
+          <button>Learn about us</button>
+        </div>
+      </div>
+      <div id="about-img">
+        <img src="./public/about.png"/>
+      </div>
+    </section>
+    
   </body>
 </html>
