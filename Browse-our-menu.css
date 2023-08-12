@@ -1,0 +1,123 @@
+.section-four-heading {
+  width: 20rem;
+}
+
+.section-four-heading h1 {
+  color: #35b8be;
+  text-align: center;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem; /* 110% */
+  letter-spacing: 1.65px;
+}
+
+.section-four-heading p {
+  color: #546285;
+  text-align: center;
+  font-family: Inter;
+  font-size: 0.7rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem; /* 168.75% */
+  letter-spacing: 0.36px;
+}
+
+.section-four-heading p .phone {
+  color: #35b8be;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.36px;
+}
+
+/* ----------------- */
+
+.card {
+  border-radius: 6px;
+  border: 1px solid rgba(53, 184, 190, 0.15);
+  background: #fff;
+  width: 520px;
+  height: 190px;
+  align-items: center;
+  gap: 2em;
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgba(53, 184, 190, 0.15);
+  background: #fff;
+}
+
+.card-content {
+  gap: 0.6rem;
+  flex-direction: column;
+  /* padding: 2rem */
+}
+
+.card img {
+  width: 120px;
+  height: 120px;
+}
+
+.card.card-head {
+  color: #08090a;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+  letter-spacing: 0.6px;
+}
+
+.card-content .card-head p {
+  color: #35b8be;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  margin-left: auto;
+  padding-left: 2rem;
+}
+
+.card p {
+  color: #546285;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.32px;
+  /* width: 20rem; */
+}
+
+.card-btns-primary {
+  padding: 0.3rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+.card-btns-secondy {
+  margin-left: 1rem;
+  padding: 0.4rem 1rem;
+  background: #35b8be;
+  border: none;
+  border-radius: 6px;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 168.75% */
+  letter-spacing: 0.36px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:1rem ;
+    padding: 2rem;
+}

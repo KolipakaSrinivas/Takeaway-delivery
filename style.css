@@ -95,26 +95,49 @@
     line-height: 1.125rem; /* 138.462% */
  }
 
+ #nav--links ul li a {
+   color: #28224B;
+   font-family: Inter;
+   font-size: 0.9375rem;
+   font-style: normal;
+   font-weight: 400;
+   line-height: 1.25rem; /* 133.333% */
+ }
+
 
 /***** HEADER START ********/
 
 #hero {
-    background: url(./public/hero--section--bg.svg);
-    background-repeat: no-repeat;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 130px 1fr;
-    padding:2em 5em;
+   background: url(./public/hero--section--bg.svg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   height: 800px;
+   width: 100%;
+   padding: 5em 10%;
+
+   
+}
+
+.hero--content {
+   width: 200px;
+}
+
+.hero--section {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-content: center;
+   align-items: center;
+  
 }
 
 #hero--section--img img {
-    width: 20rem;
-    height: 26rem;
-    flex-shrink: 0;
+   width: 20em;
+   height: 20em;
+   flex-shrink: 0;
 }
 
 #hero--section--headline {
-    width: 37.875rem;
+    /* width: 37.875rem; */
 }
 
 #hero--section {
@@ -122,23 +145,31 @@
 }
 
 #hero--section--headline h2 {
-    width: 37.875rem;
     color: #08090A;
     font-family: Inter;
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 3.75rem; /* 100% */
+    line-height: 3rem; 
     letter-spacing: 0.1125rem;
 }
 
 #delivered {
     color: #35B8BE;
     font-family: Inter;
-    font-size: 3.75rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 3.75rem;
+    line-height: 3rem;
     letter-spacing: 0.1125rem;
 }
 
+#hero--section--subheadline {
+   color: #546285;
+font-family: Inter;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.5075rem; /* 134% */
+letter-spacing: 0.0225rem;
+}
