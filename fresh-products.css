@@ -7,19 +7,19 @@
   background-position-x: 0.5rem;
   background-size: 30rem;
   width: 26rem;
-  height: 22rem;
+  height: 20rem;
   justify-content: space-around;
   flex-direction: column;
 }
 
 .fresh-products h1 {
-  width: 578px;
+  /* width: 578px; */
   color: #35b8be;
   font-family: Inter;
   font-size: 2.6rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 3rem; /* 107.843% */
+  line-height: 2.6rem;
   letter-spacing: 1.65px;
 }
 
@@ -29,14 +29,14 @@
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 27px; /* 150% */
+  line-height: 1.3rem;
   letter-spacing: 0.36px;
 }
 
 .fresh-products button {
   padding: 1rem 1rem;
-  width: 194px;
-  height: 60px;
+  width: 175px;
+  /* height: 60px; */
   flex-shrink: 0;
   border: none;
   border-radius: 12px;
@@ -48,5 +48,5 @@
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px; /* 117.647% */
+  /* line-height: 20px; 117.647% */
 }

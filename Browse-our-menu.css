@@ -116,8 +116,51 @@
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap:1rem ;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.Browse-our-menu-container {
+  margin-top: 1rem;
+}
+
+.Browse-our-menu-container button {
+  margin-left: 2rem;
+  padding: 0.6rem 2rem;
+  border-radius: 6px;
+  border: 1px solid rgba(97, 114, 131, 0.2);
+  border: none;
+  outline: none;
+  /* background:#fff; */
+  color: #222;
+  font-family: Inter;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 133.333% */
+}
+
+.btn-active {
+  color: #fff;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+  background: #35b8be;
+}
+.see-more button {
+  border: none;
+  padding: 0.6rem 1.7rem;
+  border-radius: 6px;
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  background: #35b8be;
+  line-height: 20px; /* 117.647% */
 }

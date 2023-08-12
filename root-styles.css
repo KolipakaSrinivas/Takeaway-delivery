@@ -24,8 +24,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -64,9 +64,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -94,15 +94,226 @@ select {
 
 ul li {
   list-style: none;
-
 }
 a {
   text-decoration: none;
 }
 
 body {
-    background: #F5FBFC;
-    opacity: 0.87;
+  background: #f5fbfc;
+  opacity: 0.87;
+}
+/* Landing page */
+
+header {
+  background: url(./public/images/bg-img/background-bg-1.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 100vh;
+}
+
+.landingPage {
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.landingPage-img {
+  width: 23rem;
+  height: 23rem;
+}
+/* landing page */
+/* fisrt section */
+#Home-of-fresh-products {
+  background: url(./public/images/bg-img/background-img-2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.Home-of-fresh-products {
+  /* margin-right: 4rem; */
+  overflow: hidden;
+  gap: 4rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 2rem;
+}
+.Home-of-fresh-products-img {
+  width: 20rem;
+  /* height: 20rem; */
+}
+/* first section */
+/* how-it-works */
+.how-it-works {
+  height: 100vh;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  /* opacity: 0.87; */
+}
+.how-it-works h1 {
+  color: #35b8be;
+  text-align: center;
+  font-family: Inter;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  /* line-height: 55px; 110% */
+  letter-spacing: 1.65px;
+}
+/* how-it-works */
+
+/* Browse our menu*/
+#Browse-our-menu {
+  background: #fff;
+}
+.Browse-our-menu {
+  align-items: center;
+  flex-direction: column;
+  background: #fff;
+  background: url(./public/images/bg-img/bacjground-img-3.png);
+  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-size: cover;
+  gap: 0.6rem;
+  padding: 6rem;
+}
+
+/* Browse our menu */
+/* order-online */
+
+.order-online {
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: #fff;
+}
+
+.order-online-content {
+  gap: 1rem;
+}
+
+.order-online-img {
+  position: relative;
+  width: 450px;
+  height: 450px;
+}
+
+.dots {
+  position: absolute;
+  right: 18rem;
+  top: 0;
+  width: 150px;
+  height: 150px;
+}
+
+.order-online {
+  height: 100vh;
+}
+.order-online-content h1 {
+  color: #35b8be;
+  font-family: Inter;
+  font-size: 2.2rem;
+  width: 529px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 1.65px;
+  width: 21rem;
+  margin-bottom: 1rem;
+}
+
+.order-online-content p {
+  width: 30rem;
+  color: #546285;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px; /* 150% */
+  letter-spacing: 0.36px;
+  margin-bottom: 1rem;
+}
+
+.order-online button {
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  background: #35b8be;
+}
+/* order-online */
+
+/* store */
+.store {
+  background: #fff;
+}
+
+.store-contaner {
+  background: url(./public/images/bg-img/backgound-bg-4.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100vh;
+}
+.store-content h1 {
+  background: url(./public/images/sign/sign.png);
+  background-size: 20rem;
+  width: 20rem;
+  color: #35b8be;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem; /* 100% */
+  letter-spacing: 1.65px;
+  margin-bottom: 1rem;
+}
+.store-content p {
+  width: 26rem;
+  color: #546285;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3rem; /* 150% */
+  letter-spacing: 0.36px;
+  margin-bottom: 1rem;
+}
+
+.store button {
+  color: #fff;
+  text-align: center;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 111.111% */
+  background: #35b8be;
+  padding: 0.8rem 1.7rem;
+  border: none;
+  border-radius: 6px;
+}
+
+.store-img {
+  width: 22rem;
+  height: 22rem;
+}
+/* store */
+
+/* footer */
+.footer {
+  padding: 8rem;
+}
+.copy-right {
+  padding: 1rem 5rem;
 }
 
 
+/* footer */
