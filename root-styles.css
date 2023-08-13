@@ -100,8 +100,7 @@ a {
 }
 
 body {
-  background: #f5fbfc;
-  opacity: 0.87;
+  background: rgba(245, 251, 252, 0.87);
 }
 /* Landing page */
 
@@ -116,13 +115,15 @@ header {
   flex-wrap: wrap;
   padding: 1rem 2rem;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 2rem;
+  padding: 2.4rem 8rem;
 }
 
 .landingPage-img {
-  width: 23rem;
-  height: 23rem;
+  width: 26rem;
+  height: 26rem;
+  margin-right: 3rem;
 }
 /* landing page */
 /* fisrt section */
@@ -132,17 +133,21 @@ header {
   background-repeat: no-repeat;
 }
 .Home-of-fresh-products {
-  /* margin-right: 4rem; */
+  height: 100vh;
   overflow: hidden;
-  gap: 4rem;
+  column-gap: 8rem;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 2rem 2rem;
+  /* padding: 2rem 2rem; */
 }
 .Home-of-fresh-products-img {
-  width: 20rem;
-  /* height: 20rem; */
+  width: 25rem;
+  
+}
+
+.Home-of-fresh-products img {
+  margin-right: 4rem;
 }
 /* first section */
 /* how-it-works */
@@ -169,12 +174,12 @@ header {
 
 /* Browse our menu*/
 #Browse-our-menu {
-  background: #fff;
+  background: rgba(245, 251, 252, 0.87);
 }
 .Browse-our-menu {
   align-items: center;
   flex-direction: column;
-  background: #fff;
+  background: rgba(245, 251, 252, 0.87);
   background: url(./public/images/bg-img/bacjground-img-3.png);
   background-repeat: repeat;
   background-repeat: no-repeat;
@@ -190,7 +195,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background: #fff;
+  background: rgba(245, 251, 252, 0.87);
 }
 
 .order-online-content {
@@ -250,7 +255,7 @@ header {
 
 /* store */
 .store {
-  background: #fff;
+  background:rgba(245, 251, 252, 0.87);
 }
 
 .store-contaner {

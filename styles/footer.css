@@ -2,11 +2,23 @@
   margin-left: auto;
   flex-wrap: wrap;
 }
+#footer {
+  background: url(../public/images/footer/footer-img.png);
+  background-size: contain;
+  /* height: 100vh; */
+}
 
 .footer {
-  padding: 2rem;
+  cursor: pointer;
+  padding-top: 2rem;
   flex-wrap: wrap;
+  padding-bottom: 1rem;
 }
+
+.footer-content img {
+  margin-bottom: 1.8rem;
+}
+
 .footer-content p {
   color: #546285;
   font-family: Inter;
@@ -37,8 +49,13 @@
   line-height: 20px; /* 133.333% */
 }
 
+.footer-navgation li ,h4 {
+  padding-bottom: 1.4rem;
+}
+
 .social {
   margin-left: auto;
+  cursor: pointer;
 }
 
 .social img {

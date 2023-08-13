@@ -7,13 +7,13 @@
 
     <!-- css Links Start -->
     <link rel="stylesheet" href="./root-styles.css" />
-    <link rel="stylesheet" href="./nav.css" />
-    <link rel="stylesheet" href="./Landing-page.css" />
-    <link rel="stylesheet" href="./fresh-products.css" />
-    <link rel="stylesheet" href="./How-it-works.css" />
-    <link rel="stylesheet" href="Browse-our-menu.css" />
-    <link rel="stylesheet" href="./support-good-food.css" />
-    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./styles/nav.css" />
+    <link rel="stylesheet" href="./styles/Landing-page.css" />
+    <link rel="stylesheet" href="./styles/fresh-products.css" />
+    <link rel="stylesheet" href="./styles/How-it-works.css" />
+    <link rel="stylesheet" href="./styles/Browse-our-menu.css" />
+    <link rel="stylesheet" href="./styles/support-good-food.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
     <!-- css Links End -->
   </head>
   <body>
@@ -190,7 +190,7 @@
                 <h2>Burger Dreams</h2>
                 <p>$ 9.20 USD</p>
               </div>
-              <p>
+              <p class="card-content-p">
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry.
               </p>
@@ -312,21 +312,24 @@
     </section>
     <!-- Store -->
      <!-- support-good-food -->
-     <div class="support-good-food flex">
-      <div class="img-container">
-        <img
-          src="./public/images/support-good-food/support-good-food-bg (2).png"
-          alt=""
-        />
+     <section id="support-good-food">
+      <div class="support-good-food flex">
+        <div class="img-container">
+          <img
+            src="./public/images/support-good-food/support-good-food-bg (2).png"
+            alt=""
+          />
+        </div>
+        <div class="support-good-food-content flex">
+          <h1><span>Support</span>good food <br />and local business.</h1>
+          <button>Order Now</button>
+        </div>
       </div>
-      <div class="support-good-food-content flex">
-        <h1><span>Support</span>good food <br />and local business.</h1>
-        <button>Order Now</button>
-      </div>
-    </div>
+     </section>
+     
     <!-- support-good-food -->
      <!-- foooter -->
-     <footer>
+     <footer id="footer">
       <div class="footer flex">
         <div class="footer-content">
           <img src="./public/images/icon/icon.png" alt="" />
@@ -357,10 +360,10 @@
       </div>
       <hr style="background: rgba(126, 130, 143, 0.09);width: 90%;"  />
       <div class="flex copy-right">
-        <p>Built by <span>Built by</span>· Powered by <span>Webflow</span></p>
+        <p>Built by <span>Flowbase</span>· Powered by <span>Webflow</span></p>
         <div class="social">
           <a href="#"
-            ><img src="./public/images/social/instgram.png" alt=""
+            ><img src="./public/images/social/instgram.png"  alt=""
           /></a>
           <a href="#"
             ><img src="./public/images/social/tewttre.png" alt=""
