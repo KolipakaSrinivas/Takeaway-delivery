@@ -1,5 +1,5 @@
 #support-good-food {
-  background: #fff;
+  background:#fff;
 }
 
 .support-good-food {
@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
-  flex-wrap: wrap;
 }
 
 .img-container {
@@ -18,7 +17,7 @@
 .support-good-food-content {
   background: url(../public/images/support-good-food/support-good-food-bg.png);
   height: 434px;
-  width: 407px;
+  width: 417px;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;

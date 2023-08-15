@@ -100,19 +100,18 @@ a {
 }
 
 body {
-  background: rgba(245, 251, 252, 0.87);
+  /* background: rgba(245, 251, 252, 1); */
 }
 /* Landing page */
 
 header {
-  background: url(./public/images/bg-img/background-bg-1.jpg);
+  background: url(./public/images/bg-img/background-bg-1.jpg.svg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   height: 100vh;
 }
 
 .landingPage {
-  flex-wrap: wrap;
   padding: 1rem 2rem;
   align-items: center;
   justify-content: space-between;
@@ -129,21 +128,19 @@ header {
 /* fisrt section */
 #Home-of-fresh-products {
   background: url(./public/images/bg-img/background-img-2.png);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .Home-of-fresh-products {
   height: 100vh;
   overflow: hidden;
   column-gap: 8rem;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   /* padding: 2rem 2rem; */
 }
 .Home-of-fresh-products-img {
   width: 25rem;
-  
 }
 
 .Home-of-fresh-products img {
@@ -174,12 +171,12 @@ header {
 
 /* Browse our menu*/
 #Browse-our-menu {
-  background: rgba(245, 251, 252, 0.87);
+  background: #fff;
 }
 .Browse-our-menu {
   align-items: center;
   flex-direction: column;
-  background: rgba(245, 251, 252, 0.87);
+  /* background: rgba(245, 251, 252, 0.87); */
   background: url(./public/images/bg-img/bacjground-img-3.png);
   background-repeat: repeat;
   background-repeat: no-repeat;
@@ -191,15 +188,24 @@ header {
 /* Browse our menu */
 /* order-online */
 
+#order-online {
+  /* background: rgba(245, 251, 252, 0.87); */
+  background-color: #fff;
+}
+
 .order-online {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  background: rgba(245, 251, 252, 0.87);
 }
 
-.order-online-content {
-  gap: 1rem;
+#order-online .order-online-content p {
+  width: 100%;
+}
+
+.order-online .order-online-img {
+  width: 120rem;
+  height: 24rem;
 }
 
 .order-online-img {
@@ -255,7 +261,8 @@ header {
 
 /* store */
 .store {
-  background:rgba(245, 251, 252, 0.87);
+  /* background:rgba(245, 251, 252, 0.87); */
+  background: #fff;
 }
 
 .store-contaner {
@@ -320,5 +327,81 @@ header {
   padding: 1rem 5rem;
 }
 
-
 /* footer */
+
+/* Tablet styles */
+@media screen and (max-width: 800px) {
+  #nav--bar {
+    padding: 0.6rem 2rem!important;
+  }
+
+  header {
+    height: 100%;
+  }
+
+  .landingPage {
+    padding: 2rem 1.5rem;
+  }
+  .Home-of-fresh-products {
+    padding-inline:2rem ;
+    column-gap: normal;
+  }
+  #nav--links ul {
+    display: none;
+  }
+
+  .how-it-works .section-three {
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+  }
+
+  .Browse-our-menu .cards {
+    display: block;
+  }
+
+  .card {
+    margin-bottom: 2rem;
+  }
+  .support-good-food .img-container {
+    width: 320px;
+    height: 320px;
+  }
+
+
+  .footer {
+    flex-wrap: nowrap;
+    padding: 2rem;
+  }
+  .order-online-img {
+    width: 55rem;
+    height: 24rem;
+  }
+  .store-contaner {
+    gap:0;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .support-good-food .support-good-food-content {
+    height: 310px;
+    width: 307px;
+    margin-bottom: 0;
+}
+  .landingPage-img {
+    height: 17rem;
+    margin: 0;
+  }
+
+ 
+}
+
+/* Mobile styles */
+@media screen and (max-width: 1060px) {
+  #Browse-our-menu .Browse-our-menu .cards {
+    grid-template-columns: 1fr;
+  }
+  
+}
