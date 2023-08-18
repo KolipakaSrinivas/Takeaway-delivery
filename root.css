@@ -81,6 +81,10 @@ li {
     list-style: none;
 }
 
+ul {
+  padding: 0;
+}
+
 li a {
     text-decoration: none;
 }
