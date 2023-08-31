@@ -39,6 +39,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+  background: #fff;
 }
 
 /* A elements that don't have a class get default styles */
@@ -88,3 +89,4 @@ ul {
 li a {
     text-decoration: none;
 }
+
