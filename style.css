@@ -113,7 +113,7 @@
   padding: 1rem 1.5rem;
   display: flex;
   align-items: center;
-  transition: 10s;
+  /* transition: 10s; */
 }
 
 #cart-logo-container {
@@ -193,7 +193,7 @@ body.open .nav-links {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 133.333% */
-  transition: text-decoration 0.2s;
+  /* transition: text-decoration 0.2s; */
 }
 
 .nav-links li a:hover {
@@ -616,7 +616,7 @@ body.open .nav-links {
 /* ------------- */
 @media screen and (min-width: 451px) {
   /* container */
-  .container {
+  .container {<script src="./javascript.js"></script>
     padding: 1rem 2.5rem;
   }
 
@@ -710,12 +710,17 @@ body.open .nav-links {
     width: 0;
     height: 0;
     padding: 0;
-    z-index: 1;
+    /* z-index: 1; */
     visibility: visible;
+  }
+
+  .nav-links li {
+    cursor: pointer;
   }
 
   .nav-links li a {
     color: #08090a;
+    cursor: pointer;
   }
 
   #cart-logo-container {
