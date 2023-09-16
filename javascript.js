@@ -1,23 +1,30 @@
-const menutoggle = ()=> document.body.classList.toggle('open')
+const jsonFilePath = "data.json";
 
+// Function to toggle menu
+const menutoggle = () => document.body.classList.toggle("open");
 
+// Variable to store JSON data
+let jsonData;
 
-// document.addEventListener('DOMContentLoaded', function () {
-//     const navLinks = document.querySelectorAll('nav ul li a');
+// Fetch the JSON data
+async function fetchingData() {
+  try {
+    const response = await fetch(jsonFilePath);
 
-//     navLinks.forEach(function (link) {
-//         link.addEventListener('click', function (e) {
-//             e.preventDefault();
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
 
-//             const targetId = this.getAttribute('href').substring(1);
-//             const targetSection = document.getElementById(targetId);
+    jsonData = await response.json();
+    call(); // Call another function after jsonData is populated
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
 
-//             if (targetSection) {
-//                 window.scrollTo({
-//                     top: targetSection.offsetTop,
-//                     behavior: 'smooth'
-//                 });
-//             }
-//         });
-//     });
-// });
+fetchingData();
+
+// Function to work with jsonData after it's populated
+function call() {
+    console.log(jsonData);
+}
