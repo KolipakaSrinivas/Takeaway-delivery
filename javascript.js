@@ -1,30 +1,77 @@
-const jsonFilePath = "data.json";
+document.getElementById("menuber").addEventListener("click", function () {
+  document.body.classList.toggle("open");
+});
 
-// Function to toggle menu
-const menutoggle = () => document.body.classList.toggle("open");
+const cardListContainer = document.getElementById("section-four-card-list");
 
-// Variable to store JSON data
+// Define the path to your JSON file (no import statement for JSON)
+const jsonFilePath = "./data.json";
+
 let jsonData;
 
-// Fetch the JSON data
-async function fetchingData() {
+async function fetchData() {
   try {
     const response = await fetch(jsonFilePath);
-
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error("Network is not okay");
     }
-
     jsonData = await response.json();
-    call(); // Call another function after jsonData is populated
+    generateCards(jsonData);
   } catch (error) {
-    console.error('Error fetching or parsing JSON data:', error);
+    console.error("Fetch data is not okay", error);
   }
 }
 
-fetchingData();
+// Call the fetchData function to start fetching the JSON data
 
-// Function to work with jsonData after it's populated
-function call() {
-    console.log(jsonData);
+function generateCards(cards) {
+  let html = "";
+  cards.forEach((element) => {
+    html += `
+    <div class="card">
+    <div class="card-img-container">
+    <img src="./public/images/card-imgs/card-6.png" alt="img" />
+      </div>
+      <div class="card-content">
+        <div class="card-content-heading">
+        <h3>${element.name}</h3>
+        <p>$ ${element.price} USD</p>
+        </div>
+        <p>
+        ${element.description}
+        </p>
+        <div class="card-content-btns">
+        <button class="primary">${element.count ? element.count : 0}</button>
+        <button class="secondary" data-button-id=${
+          element.id
+        }>Add to card</button>
+        </div>
+        </div>
+        </div>
+        `;
+  });
+  cardListContainer.innerHTML = html;
+
+  document.querySelectorAll(".secondary").forEach((element) => {
+    element.addEventListener("click", addCart);
+  });
 }
+
+const cartArray = [];
+
+function addCart(event) {
+  let id = this.getAttribute("data-button-id");
+  jsonData.forEach((element) => {
+    if (id == element.id) {
+      cartArray.push({
+        ...element,
+        count: 1
+      });
+    }
+    generateCards(cartArray);
+  });
+}
+
+
+
+fetchData();
