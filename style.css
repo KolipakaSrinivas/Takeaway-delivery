@@ -648,7 +648,7 @@ div#cart {
 /* ------------- */
 @media screen and (min-width: 451px) {
   /* container */
-  .container {<script src="./javascript.js"></script>
+  .container {
     padding: 1rem 2.5rem;
   }
 
@@ -951,3 +951,6 @@ div#cart {
     padding: 2rem 8rem;
   }
 }
+
+
+

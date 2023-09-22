@@ -1,8 +1,9 @@
 document.getElementById("menuber").addEventListener("click", function () {
   document.body.classList.toggle("open");
+  console.log("Clicked")
 });
 
-const cardListContainer = document.getElementById("section-four-card-list");
+// const cardListContainer = document.getElementById("section-four-card-list");
 
 // Define the path to your JSON file (no import statement for JSON)
 const jsonFilePath = "./data.json";
@@ -65,13 +66,19 @@ function addCart(event) {
     if (id == element.id) {
       cartArray.push({
         ...element,
-        count: 1
+        // count: 1++
       });
     }
-    generateCards(cartArray);
   });
 }
 
-
+function RerenderCards(cards) {
+  const newCardsArray = cards.map((element) => ({ ...element, count: 0 }));
+  
+}
 
 fetchData();
+
+
+// scroll:smoth
+// https://youtube.com/shorts/hk3RgcBx5Fc?si=JHr8NQPd4E5rjhUc
