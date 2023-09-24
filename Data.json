@@ -4,41 +4,47 @@
     "name": "Burger Dreams",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "price": 9.2,
-    "image_url": "/images/burgers/burger-dreams.jpg"
+    "image_url": "/images/burgers/burger-dreams.jpg",
+    "count":0
   },
   {
     "id": 2,
     "name": "Burger Waldo",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "price": 10.0,
-    "image_url": "/images/burgers/burger-dreams.jpg"
+    "image_url": "/images/burgers/burger-dreams.jpg",
+    "count":0
   },
   {
     "id": 3,
     "name": "Burger Cali",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "price": 8.0,
-    "image_url": "/images/burgers/burger-dreams.jpg"
+    "image_url": "/images/burgers/burger-dreams.jpg",
+    "count":0
   },
   {
     "id": 4,
     "name": "Burger Bacon Buddy",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "price": 9.99,
-    "image_url": "/images/burgers/burger-dreams.jpg"
+    "image_url": "/images/burgers/burger-dreams.jpg",
+    "count":0
   },
   {
     "id": 5,
     "name": "Burger Spicy",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "price": 9.2,
-    "image_url": "/images/burgers/burger-dreams.jpg"
+    "image_url": "/images/burgers/burger-dreams.jpg",
+    "count":0
   },
   {
     "id": 6,
     "name": "Burger Classic",
     "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     "price": 8.0,
-    "image_url": "/images/burgers/burger-dreams.jpg"
+    "image_url": "/images/burgers/burger-dreams.jpg",
+    "count":0
   }
 ]

@@ -254,6 +254,13 @@ body.open .nav-links {
   justify-content: center;
 }
 
+div#section-six .container .container-content {
+  background: url(./public/images/sign.png);
+  background-position: center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+
 .section-three-card-img {
   width: 220px;
   height: 220px;
@@ -285,6 +292,9 @@ body.open .nav-links {
 
 #section-seven-content {
   padding: 3.5rem 1rem;
+  background: url(./public/images/support-good-food-bg.png);
+  background-position: center;
+  background-size: cover;
 }
 
 #section-seven-content .Support {
@@ -596,7 +606,6 @@ body.open .nav-links {
   background-color: #f5fbfc;
 }
 
-
 /* Cart section */
 
 div#cart {
@@ -612,7 +621,7 @@ div#cart {
 
 .cart-container .cart-content {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   align-items: center;
   gap: 2rem;
 }
@@ -779,6 +788,13 @@ div#cart {
     background-size: cover;
   }
 
+  div#section-two-content {
+    background: url(./public/images/sign.png);
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+  }
+
   /* section four */
 
   #section-four {
@@ -872,15 +888,6 @@ div#cart {
     line-height: 2.5rem;
   } */
 
-  /* section two */
-
-  div#section-two-content {
-    background: url(./public/images/sign.png);
-    background-size: cover;
-    background-position-x: 80px;
-    background-position-y: 30px;
-    background-repeat: no-repeat;
-  }
   /* section five  */
   div#section-five-content {
     width: 30rem;
@@ -916,11 +923,10 @@ div#cart {
 
   /* Cart Section*/
 
-  .cart-container .cart-content{
+  .cart-container .cart-content {
     flex-direction: row;
     justify-content: space-evenly;
   }
-
 }
 
 /* ------------ */
@@ -951,6 +957,3 @@ div#cart {
     padding: 2rem 8rem;
   }
 }
-
-
-
