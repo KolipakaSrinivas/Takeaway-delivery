@@ -1,112 +1,140 @@
-const jsonFilePath = "./data.json";
-let jsonData;
-const cartArray = [];
+const jsonData = "./data.json";
+const cardListContainer = document.getElementById("section-four-card-list");
+const cart_container = document.querySelector('.cart-counter')
+const cart_value = cart_container.getElementsByTagName('span')[0]
+
+
 document.getElementById("menuber").addEventListener("click", function () {
   document.body.classList.toggle("open");
 });
 
-const cardListContainer = document.getElementById("section-four-card-list");
-// Define the path to your JSON file (no import statement for JSON)
 
-const cartCounter = document.getElementById("cart-counter");
-const spanElement = cartCounter.getElementsByTagName("span")[0]; // Assuming there's only one <span> inside cart-counter
 
-async function fetchData() {
-  try {
-    const response = await fetch(jsonFilePath);
-    if (!response.ok) {
-      throw new Error("Network is not okay");
-    }
-    jsonData = await response.json();
-    generateCards(jsonData);
-  } catch (error) {
-    console.error("Fetch data is not okay", error);
+function localStorageCheaking() {
+  if (localStorage.getItem("key")) {
+    let value = localStorage.getItem("key");
+    let value2 = JSON.parse(value);
+    renderCards(value2);
+    setCartValue(value2)
+  } else {
+    fetchIngData(jsonData);
   }
 }
 
-// Call the fetchData function to start fetching the JSON data
+async function fetchIngData(jsonData) {
+  try {
+    const response = await fetch(jsonData);
+    if (!response.ok) {
+      throw new Error("netWork is not ok");
+    }
+    const fetchData = await response.json();
+    renderCards(fetchData);
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-function generateCards(jsonData) {
+function renderCards(data) {
   let html = "";
-  jsonData.map((element) => {
-    html += ` <div class="card">
-    <div class="card-img-container">
-    <img src="./public/images/card-imgs/card-6.png" alt="img" />
-      </div>
-      <div class="card-content">
-        <div class="card-content-heading">
-        <h3>${element.name}</h3>
-        <p>$ ${element.price} USD</p>
-        </div>
-        <p>
-        ${element.description}
-        </p>
-        <div class="card-content-btns">
-        <button data-button-id=${element.id} class="primary">${
-      element.count < 0 ? 0 : element.count
+  data.forEach((element) => {
+    html += `
+        <div class="card">
+          <div class="card-img-container">
+            <img src="./public/images/card-imgs/card-6.png" alt="img"/>
+          </div>
+          <div class="card-content">
+              <div class="card-content-heading">
+                <h3>${element.name}</h3>
+                <p>$ ${element.price} USD</p>
+              </div>
+              <p>
+                  ${element.description}
+              </p>
+          <div class="card-content-btns">
+                <button class="primary" data-id='${element.id}' > ${
+      element.count
     }</button>
-        <button class="secondary" data-button-id=${element.id}>${
+                <button class="secondary" data-id='${element.id}'>${
       element.count == 0 ? "Add to card" : "+"
     }</button>
+          </div>
         </div>
-        </div>
-        </div>`;
+      </div>    
+    `;
   });
   cardListContainer.innerHTML = html;
 
   document.querySelectorAll(".secondary").forEach((btn) => {
+    const id = btn.getAttribute("data-id");
     btn.addEventListener("click", function () {
-      let id = btn.getAttribute("data-button-id");
-      addToCart(id);
+      addToCart(id, data);
     });
   });
 
   document.querySelectorAll(".primary").forEach((btn) => {
+    const id = btn.getAttribute("data-id");
     btn.addEventListener("click", function () {
-      let id = btn.getAttribute("data-button-id");
-      removeCart(id);
+      removeToCart(id, data);
     });
   });
 }
 
-function addToCart(id) {
-  const updatedData = jsonData.map((value) => {
-    if (value.id == id) {
-      cartArray.push();
-      return {
-        ...value,
-        count: value.count + 1 // Increment the count property by 1
-      };
-    } else {
-      return value; // Return unchanged value for items that don't match the ID
-    }
-  });
-
-  // Now, you can update the jsonData with the updatedData
-  jsonData = updatedData;
-  generateCards(jsonData);
-}
-
-function removeCart(id) {
-  const updatedData = jsonData.map((value) => {
+function addToCart(id, data) {
+  const updatedData = data.map((value) => {
     if (value.id == id) {
       return {
         ...value,
-        count: value.count - 1 // Decrement the count property by 1
+        count: value.count + 1
       };
     } else {
-      return value; // Return unchanged value for items that don't match the ID
+      return value;
+    }
+  });
+  renderCards(updatedData);
+  storeLocalStorage(updatedData);
+  setCartValue(updatedData)
+}
+
+function removeToCart(id, data) {
+  const updatedData = data.map((value) => {
+    if (value.id == id) {
+      if (value.count > 0) {
+        return {
+          ...value,
+          count: value.count - 1
+        };
+      } else {
+        return value;
+      }
+    } else {
+      return value;
     }
   });
 
-  // Update jsonData with the updatedData
-  jsonData = updatedData;
-
-  // Call generateCards with the updated data
-  generateCards(jsonData);
+  renderCards(updatedData);
+  storeLocalStorage(updatedData);
+  setCartValue(updatedData)
 }
 
-fetchData();
+function storeLocalStorage(data) {
+  return localStorage.setItem("key", JSON.stringify(data));
+}
 
-// scroll:smoth
-// https://youtube.com/shorts/hk3RgcBx5Fc?si=JHr8NQPd4E5rjhUc
+function removelocalStorage() {
+  localStorage.clear();
+}
+
+function setCartValue(updatedData) {
+  const value = updatedData.reduce((accumulator, currentValue)=> {
+   return accumulator + currentValue.count
+  },0)
+  cart_value.innerText = value
+} 
+
+// removelocalStorage()
+
+localStorageCheaking();
+
+
+// // scroll:smoth
+// // https://youtube.com/shorts/hk3RgcBx5Fc?si=JHr8NQPd4E5rjhUc
