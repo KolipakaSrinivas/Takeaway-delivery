@@ -261,7 +261,7 @@ body.open .nav-links {
 }
 
 div#section-six .container .container-content {
-  background: url(./public/images/sign.png);
+  background: url(/images/sign.png);
   background-position: center;
   background-size: 90%;
   background-repeat: no-repeat;
@@ -298,7 +298,7 @@ div#section-six .container .container-content {
 
 #section-seven-content {
   padding: 3.5rem 1rem;
-  background: url(./public/images/support-good-food-bg.png);
+  background: url(/images/container-images/support-good--food-local-food.svg);
   background-position: center;
   background-size: cover;
 }
@@ -582,7 +582,7 @@ div#section-six .container .container-content {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  background: url(./public/images/bg/footer.png);
+  background: url(/images/container-images/footer-patterns.svg);
   background-position: center;
   background-size: cover;
 }
@@ -836,7 +836,7 @@ div#cart {
   /* Header */
   #header {
     position: relative;
-    background: url(./public/images/bg/Bg-1.svg);
+    background: url(/images/Bg-imges/Bg-1.svg);
     padding-bottom: 13rem;
     background-size: cover;
     background-color: #f5fbfc;
@@ -846,13 +846,13 @@ div#cart {
 
   #section-two {
     position: relative;
-    background: url(./public/images/bg/BG-2t.svg);
+    background: url(/images/Bg-imges/BG-2t.svg);
     padding-bottom: 10rem;
     background-size: cover;
   }
 
   div#section-two-content {
-    background: url(./public/images/sign.png);
+    background: url(/images/sign.png);
     background-position: center;
     background-size: 90%;
     background-repeat: no-repeat;
@@ -861,14 +861,14 @@ div#cart {
   /* section four */
 
   #section-four {
-    background: url(./public/images/bg/Bg-3.svg);
+    background: url(/images/Bg-imges/Bg-3.svg);
     background-size: cover;
   }
 
   /* section-six */
 
   #section-six {
-    background: url(./public/images/bg/bg-4.svg);
+    background: url(/images/Bg-imges/bg-4.svg);
     background-color: unset;
   }
 

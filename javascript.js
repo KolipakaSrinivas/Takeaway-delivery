@@ -1,4 +1,60 @@
-const jsonData = "./data.json";
+const mydata = [
+  {
+    id: 1,
+    name: "Burger Dreams",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 9.2,
+    image_url: "IMAGE-1.png",
+    count: 0
+  },
+  {
+    id: 2,
+    name: "Burger Waldo",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 10.0,
+    image_url: "IMAGE-2.png",
+    count: 0
+  },
+  {
+    id: 3,
+    name: "Burger Cali",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 8.0,
+    image_url: "IMAGE-3.png",
+    count: 0
+  },
+  {
+    id: 4,
+    name: "Burger Bacon Buddy",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 9.99,
+    image_url: "IMAGE-4.png",
+    count: 0
+  },
+  {
+    id: 5,
+    name: "Burger Spicy",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 9.2,
+    image_url: "IMAGE-5.png",
+    count: 0
+  },
+  {
+    id: 6,
+    name: "Burger Classic",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 8.0,
+    image_url: "IMAGE-6.png",
+    count: 0
+  }
+];
+
 const cardListContainer = document.getElementById("section-four-card-list");
 const cart_container = document.querySelector(".cart-counter");
 const cart_value = cart_container.getElementsByTagName("span")[0];
@@ -24,11 +80,10 @@ document
 if (logo !== null) {
   logo.addEventListener("click", function() {
     window.location.href = "./index.html";
-    // console.log('lkkk')
   });
 }
 
-function localStorageCheaking() {
+function localStorageCheaking(mydata) {
   if (localStorage.getItem("key")) {
     let value = localStorage.getItem("key");
     let value2 = JSON.parse(value);
@@ -36,20 +91,7 @@ function localStorageCheaking() {
     setCartValue(value2);
     cartCardsRender(value2);
   } else {
-    fetchIngData(jsonData);
-  }
-}
-
-async function fetchIngData(jsonData) {
-  try {
-    const response = await fetch(jsonData);
-    if (!response.ok) {
-      throw new Error("netWork is not ok");
-    }
-    const fetchData = await response.json();
-    renderCards(fetchData);
-  } catch (error) {
-    console.log(error);
+    renderCards(mydata);
   }
 }
 
@@ -59,7 +101,7 @@ function renderCards(data) {
     html += `
         <div class="card">
           <div class="card-img-container">
-            <img src="./public/images/card-imgs/card-6.png" alt="img"/>
+            <img src="/images/cards-images/${element.image_url}" alt="img"/>
           </div>
           <div class="card-content">
               <div class="card-content-heading">
@@ -86,7 +128,6 @@ function renderCards(data) {
   } else {
     console.log();
   }
-
   secondarybtn(data);
   primarybtn(data);
 }
@@ -169,7 +210,7 @@ function cartCardsRender(data) {
     if (item.count > 0) {
       html += `
     <div class="cart-card">
-          <img src="./public/images/card-imgs/card-1.png" alt="">
+          <img src="/images/cards-images/${item.image_url}" alt="">
           <div>
             <h2>${item.name}</h2>
             <h2>$${item.price}</h2>
@@ -188,7 +229,6 @@ function cartCardsRender(data) {
   } else {
     console.log();
   }
-
   secondarybtn(data);
   primarybtn(data);
   calculateTotalBill(data);
@@ -218,9 +258,9 @@ function placeOrder() {
       if (window.confirm("Your Order Placed")) {
         removelocalStorage();
         location.reload();
-        window.location.href = "./index.html";
+        window.location.href = "../index.html";
       } else {
-        // alert('Your Not Placed')
+        // alert()
       }
     });
   } else {
@@ -228,7 +268,7 @@ function placeOrder() {
   }
 }
 
-localStorageCheaking();
+localStorageCheaking(mydata);
 
 // // scroll:smoth
 // // https://youtube.com/shorts/hk3RgcBx5Fc?si=JHr8NQPd4E5rjhUc
