@@ -98,6 +98,11 @@
   transition: background-color 0.3s ease;
 }
 
+.primary-btn a {
+  text-decoration: none;
+  color: white;
+}
+
 .primary-btn:hover {
   background-color: #5bcad2;
 }
@@ -129,6 +134,7 @@
 #nav-logo-container {
   width: 40px;
   height: 40px;
+  cursor: pointer;
 }
 
 .nav-links {
@@ -193,12 +199,12 @@ body.open .nav-links {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 133.333% */
-  /* transition: text-decoration 0.2s; */
+  transition: text-decoration 0.2s;
 }
 
 .nav-links li a:hover {
   color: rgba(53, 184, 190, 1);
-  /* text-decoration: overline; */
+  text-decoration: underline;
 }
 
 /* ------------- */
@@ -665,11 +671,12 @@ div#cart {
   padding-block: 1rem;
 }
 
-.cart-card h2 ,.cart-card h1{
+.cart-card h2,
+.cart-card h1 {
   color: #35b8be;
   font-family: Inter;
   margin-block: 1rem;
-  font-size:1.5rem;
+  font-size: 1.5rem;
   max-width: 10rem;
 }
 
@@ -685,17 +692,39 @@ div#cart {
 }
 
 .cart-card button:hover {
-  background-color: rgba(53, 184, 190,0.7);
+  background-color: rgba(53, 184, 190, 0.7);
   transition: 0.2s;
 }
-
 
 #cart-section img {
   border-radius: 10%;
 }
 
+.total-bill {
+  color: #1b9097;
+  transition: 0.5s;
+}
 
+.place_order {
+  background-color: #35b8be;
+  border: none;
+  border-radius: 6px;
+  color: #ddd;
+  padding: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
 
+.place_order:hover {
+  background-color: #5bcad2;
+}
+
+.billing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 /* ------------ */
 /* 451px */
 /* ------------- */
@@ -728,7 +757,6 @@ div#cart {
   }
   /* Header */
 
-
   .description {
     width: 30rem;
   }
@@ -748,8 +776,6 @@ div#cart {
   /* Header */
   /* #header-content p {
   } */
-
-  
 }
 
 /* ------------ */
@@ -965,7 +991,7 @@ div#cart {
 
 /* 1000px */
 
-@media screen and (min-width:1000px) {
+@media screen and (min-width: 1000px) {
   #cart-section {
     display: flex;
     align-items: center;
@@ -1007,4 +1033,21 @@ div#cart {
   #section-four-card-list {
     padding: 2rem 8rem;
   }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Apply the animation to the span element */
+.animate-fade-in-out {
+  animation: fadeInOut 2s ease-in-out;
 }

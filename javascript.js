@@ -3,20 +3,30 @@ const cardListContainer = document.getElementById("section-four-card-list");
 const cart_container = document.querySelector(".cart-counter");
 const cart_value = cart_container.getElementsByTagName("span")[0];
 const cart_section = document.getElementById("cart-section");
+const total_bill = document.querySelector(".total-bill");
+const place_order = document.querySelector(".place_order");
+const logo = document.querySelector("#nav-logo-container");
 
-document.getElementById("menuber").addEventListener("click", function () {
+document.getElementById("menuber").addEventListener("click", function() {
   document.body.classList.toggle("open");
 });
 
-document.querySelectorAll(".nav-links li a").forEach((item) => {
-  item.addEventListener("click", function () {
+document.querySelectorAll(".nav-links li a").forEach(item => {
+  item.addEventListener("click", function() {
     document.body.classList.toggle("open");
   });
 });
 
 document
   .querySelector("#nav-logo-container")
-  .addEventListener("click", function () {});
+  .addEventListener("click", function() {});
+
+if (logo !== null) {
+  logo.addEventListener("click", function() {
+    window.location.href = "./index.html";
+    // console.log('lkkk')
+  });
+}
 
 function localStorageCheaking() {
   if (localStorage.getItem("key")) {
@@ -45,7 +55,7 @@ async function fetchIngData(jsonData) {
 
 function renderCards(data) {
   let html = "";
-  data.forEach((element) => {
+  data.forEach(element => {
     html += `
         <div class="card">
           <div class="card-img-container">
@@ -60,12 +70,11 @@ function renderCards(data) {
                   ${element.description}
               </p>
           <div class="card-content-btns">
-                <button class="primary" data-id='${element.id}' > ${
-      element.count
-    }</button>
-                <button class="secondary" data-id='${element.id}'>${
-      element.count == 0 ? "Add to card" : "+"
-    }</button>
+                <button class="primary" data-id='${element.id}' > ${element.count}</button>
+                <button class="secondary" data-id='${element.id}'>${element.count ==
+    0
+      ? "Add to card"
+      : "+"}</button>
           </div>
         </div>
       </div>    
@@ -75,7 +84,7 @@ function renderCards(data) {
   if (cardListContainer !== null) {
     cardListContainer.innerHTML = html;
   } else {
-    console.log("cardListContainer is not found");
+    console.log();
   }
 
   secondarybtn(data);
@@ -83,25 +92,25 @@ function renderCards(data) {
 }
 
 function primarybtn(data) {
-  document.querySelectorAll(".primary").forEach((btn) => {
+  document.querySelectorAll(".primary").forEach(btn => {
     const id = btn.getAttribute("data-id");
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function() {
       removeToCart(id, data);
     });
   });
 }
 
 function secondarybtn(data) {
-  document.querySelectorAll(".secondary").forEach((btn) => {
+  document.querySelectorAll(".secondary").forEach(btn => {
     const id = btn.getAttribute("data-id");
-    btn.addEventListener("click", function () {
+    btn.addEventListener("click", function() {
       addToCart(id, data);
     });
   });
-};
+}
 
 function addToCart(id, data) {
-  const updatedData = data.map((value) => {
+  const updatedData = data.map(value => {
     if (value.id == id) {
       return {
         ...value,
@@ -114,11 +123,11 @@ function addToCart(id, data) {
   renderCards(updatedData);
   storeLocalStorage(updatedData);
   setCartValue(updatedData);
-  cartCardsRender(updatedData)
+  cartCardsRender(updatedData);
 }
 
 function removeToCart(id, data) {
-  const updatedData = data.map((value) => {
+  const updatedData = data.map(value => {
     if (value.id == id) {
       if (value.count > 0) {
         return {
@@ -136,7 +145,7 @@ function removeToCart(id, data) {
   renderCards(updatedData);
   storeLocalStorage(updatedData);
   setCartValue(updatedData);
-  cartCardsRender(updatedData)
+  cartCardsRender(updatedData);
 }
 
 function storeLocalStorage(data) {
@@ -156,8 +165,9 @@ function setCartValue(updatedData) {
 
 function cartCardsRender(data) {
   let html = "";
-  data.map((item) => {
-    html += `
+  data.map(item => {
+    if (item.count > 0) {
+      html += `
     <div class="cart-card">
           <img src="./public/images/card-imgs/card-1.png" alt="">
           <div>
@@ -170,19 +180,53 @@ function cartCardsRender(data) {
         </div>
       </div>
     `;
+    }
   });
 
   if (cart_section !== null) {
     cart_section.innerHTML = html;
   } else {
-    console.log("cart_section is not found");
+    console.log();
   }
 
   secondarybtn(data);
   primarybtn(data);
+  calculateTotalBill(data);
 }
 
-// removelocalStorage()
+function calculateTotalBill(data) {
+  let totalBill = 0;
+  data.forEach(item => {
+    let amount = 0;
+    if (item.count > 0) {
+      amount = item.price * item.count;
+    }
+    totalBill += amount;
+  });
+
+  if (total_bill !== null) {
+    total_bill.innerText = `Total Bill $ ${totalBill}`;
+  } else {
+    console.log();
+  }
+  placeOrder();
+}
+
+function placeOrder() {
+  if (place_order !== null) {
+    place_order.addEventListener("click", function() {
+      if (window.confirm("Your Order Placed")) {
+        removelocalStorage();
+        location.reload();
+        window.location.href = "./index.html";
+      } else {
+        // alert('Your Not Placed')
+      }
+    });
+  } else {
+    console.log();
+  }
+}
 
 localStorageCheaking();
 
