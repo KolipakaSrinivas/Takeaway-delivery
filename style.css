@@ -36,8 +36,8 @@
 /* ------------ */
 
 .heading {
-  color: #35b8be;
-  font-family: Inter;
+  color: var( --color-lightseagreen-100);
+  font-family: var( --font-inter);
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
@@ -46,8 +46,8 @@
 }
 
 .description {
-  color: #546285;
-  font-family: Inter;
+  color: var(--color-slategray-100);
+  font-family: var( --font-inter);
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -56,9 +56,9 @@
 }
 
 .card-heading {
-  color: #08090a;
+  color: var(--color-gray-300);
   text-align: center;
-  font-family: Inter;
+  font-family: var( --font-inter);
   font-size: 1.2rem;
   font-style: normal;
   font-weight: 400;
@@ -67,9 +67,9 @@
 }
 
 .card-description {
-  color: #546285;
+  color: var(--color-slategray-100);
   text-align: center;
-  font-family: Inter;
+  font-family: var( --font-inter);
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -86,10 +86,10 @@
   border-radius: 6px;
   border: none;
   padding: 0.9rem 1.5rem;
-  background: #35b8be;
-  color: #fff;
+  background: var( --color-lightseagreen-100);
+  color: var(--color-white);
   text-align: center;
-  font-family: Inter;
+  font-family: var( --font-inter);
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
@@ -134,7 +134,7 @@
 #nav-logo-container {
   width: 40px;
   height: 40px;
-  cursor: pointer;
+  cursor: var( --font-inter);
 }
 
 .nav-links {
@@ -148,9 +148,9 @@
   gap: 2rem;
   flex-direction: column;
   padding-top: 5rem;
-  background: #1b9097;
+  background: var( --color-lightseagreen-100);
   opacity: 0.9;
-  color: #fff;
+  color: var(--color-white);
   z-index: 3;
   translate: -100% 0%;
   transition: translate 2s;
@@ -171,7 +171,7 @@ body.open .nav-links {
   width: 55px;
   height: 50px;
   border-radius: 6px;
-  background: #35b8be;
+  background: var( --color-lightseagreen-100);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -181,20 +181,23 @@ body.open .nav-links {
   left: 34px;
   position: absolute;
   border-radius: 50%;
-  background: #fff;
+  background: var(--color-white);
   box-shadow: 7px 7px 25px 0px rgba(126, 130, 143, 0.27);
   padding-inline: 10px;
+  font-weight: 500;
 }
 
 .cart-counter span {
   font-size: 1rem;
-  color: rgba(53, 184, 190, 1);
+  /* color: rgba(53, 184, 190, 1); */
+  color: var( --color-lightseagreen-100);
+
 }
 
 .nav-links li a {
   cursor: pointer;
-  color: #fff;
-  font-family: Inter;
+  color: var(--color-white);
+  font-family: var( --font-inter);
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -216,8 +219,8 @@ body.open .nav-links {
 }
 
 #header-content h1 {
-  color: #08090a;
-  font-family: Inter;
+  color: var(--color-gray-300);
+  font-family: var( --font-inter);
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 400;
@@ -230,8 +233,8 @@ body.open .nav-links {
 }
 
 #review {
-  color: #35b8be;
-  font-family: Inter;
+  color: var( --color-lightseagreen-100);
+  font-family: var( --font-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -239,8 +242,8 @@ body.open .nav-links {
 }
 
 #review span {
-  color: #08090a;
-  font-family: Inter;
+  color: var(--color-gray-300);
+  font-family: var( --font-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -261,7 +264,7 @@ body.open .nav-links {
 }
 
 div#section-six .container .container-content {
-  background: url(/images/sign.png);
+  background: url(./images/sign.png);
   background-position: center;
   background-size: 90%;
   background-repeat: no-repeat;
@@ -298,14 +301,14 @@ div#section-six .container .container-content {
 
 #section-seven-content {
   padding: 3.5rem 1rem;
-  background: url(/images/container-images/support-good--food-local-food.svg);
+  background: url(./images/container-images/support-good--food-local-food.svg);
   background-position: center;
   background-size: cover;
 }
 
 #section-seven-content .Support {
-  color: #1b9097;
-  font-family: Inter;
+  color: var( --color-lightseagreen-100);
+  font-family: var( --font-inter);
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -315,8 +318,8 @@ div#section-six .container .container-content {
 
 #section-seven-content h1 {
   padding: 5rem 1rem;
-  color: #fff;
-  font-family: Inter;
+  color: var(--color-white);
+  font-family: var( --font-inter);
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -330,10 +333,10 @@ div#section-six .container .container-content {
   cursor: pointer;
   padding: 0.8rem 1.3rem;
   border: none;
-  color: #35b8be;
+  color: var( --color-lightseagreen-100);
   text-align: center;
-  font-family: Inter;
-  background: #fff;
+  font-family: var( --font-inter);
+  background: var(--color-white);
   font-size: 17px;
   font-style: normal;
   font-weight: 400;
@@ -352,9 +355,9 @@ div#section-six .container .container-content {
 }
 
 #section-four .section-four-heading {
-  color: #35b8be;
+  color: var( --color-lightseagreen-100);
   text-align: center;
-  font-family: Inter;
+  font-family: var( --font-inter);
   font-size: 2rem;
   font-style: normal;
   font-weight: 400;
@@ -364,14 +367,18 @@ div#section-six .container .container-content {
 
 #section-four .section-four-description {
   max-width: 25rem;
-  color: #546285;
+  color: var(--color-slategray-100);
   text-align: center;
-  font-family: Inter;
+  font-family: var( --font-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 27px; /* 168.75% */
+  /* line-height: 27px; 168.75% */
   letter-spacing: 0.36px;
+}
+
+.section-four-description span {
+  color: var(--color-lightseagreen-100);
 }
 #section-four-group-btns {
   display: flex;
@@ -379,12 +386,13 @@ div#section-six .container .container-content {
 }
 
 #section-four-group-btns .active-btn {
-  background: rgba(53, 184, 190, 1);
+  /* background: rgba(53, 184, 190, 1); */
+  background: var( --color-lightseagreen-100);
   border: none;
   border-radius: 6px;
   padding: 0.8rem 1.5rem;
-  color: #fff;
-  font-family: Inter;
+  color: var(--color-white);
+  font-family: var( --font-inter);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -394,9 +402,9 @@ div#section-six .container .container-content {
 #section-four-group-btns button {
   padding: 0.8rem 1.5rem;
   border-radius: 6px;
-  border: 1px solid rgba(97, 114, 131, 0.2);
-  color: #222;
-  font-family: Inter;
+  border: 1px solid var( --color-slategray-200);
+  color: var(--color-gray-200);
+  font-family: var( --font-inter);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -415,7 +423,7 @@ div#section-six .container .container-content {
   padding: 1rem;
   border-radius: 6px;
   border: 1px solid rgba(53, 184, 190, 0.15);
-  background: #fff;
+  background: var(--color-white);
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -432,8 +440,8 @@ div#section-six .container .container-content {
 }
 
 .card-content h3 {
-  color: #08090a;
-  font-family: Inter;
+  color: var(--color-gray-300);
+  font-family: var( --font-inter);
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -442,8 +450,8 @@ div#section-six .container .container-content {
 }
 
 .card-content p {
-  color: #546285;
-  font-family: Inter;
+  color: var(--color-slategray-100);
+  font-family: var( --font-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -458,8 +466,8 @@ div#section-six .container .container-content {
 
 .card-content-heading p {
   margin-left: auto;
-  color: #35b8be;
-  font-family: Inter;
+  color: var(--color-lightseagreen-100);
+  font-family: var( --font-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -482,13 +490,14 @@ div#section-six .container .container-content {
 }
 
 .card-content-btns .secondary {
-  background: rgba(53, 184, 190, 1);
+  /* background: rgba(53, 184, 190, 1); */
+  background: var( --color-lightseagreen-100);
   border-radius: 6px;
   border: none;
   padding: 0.3rem 0.9rem;
-  color: #000;
+  color: var(--color-black);
   text-align: center;
-  font-family: Inter;
+  font-family: var( --font-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -518,8 +527,8 @@ div#section-six .container .container-content {
 }
 
 #footer-logo-container p {
-  color: #546285;
-  font-family: Inter;
+  color: var(--color-slategray-100);
+  font-family:var( --font-inter);
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -529,8 +538,8 @@ div#section-six .container .container-content {
 
 #footer-links ul h3 {
   margin-bottom: 1rem;
-  color: #08090a;
-  font-family: Inter;
+  color: var(--color-gray-300);
+  font-family: var( --font-inter);
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
@@ -540,8 +549,8 @@ div#section-six .container .container-content {
 }
 
 #footer-links ul li a {
-  color: #546285;
-  font-family: Inter;
+  color: var(--color-slategray-100);
+  font-family: var( --font-inter);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -554,13 +563,13 @@ div#section-six .container .container-content {
 
 #footer-links ul li a:hover {
   cursor: pointer;
-  color: #35b8be;
+  color: var(--color-lightseagreen-100);
   text-decoration: underline;
 }
 
 #copy-tag p {
   color: #353448;
-  font-family: Inter;
+  font-family: var( --font-inter);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -568,8 +577,8 @@ div#section-six .container .container-content {
 }
 
 #copy-tag span {
-  color: #35b8be;
-  font-family: Inter;
+  color: var( --color-lightseagreen-100);
+  font-family: var( --font-inter);
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
@@ -582,7 +591,7 @@ div#section-six .container .container-content {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
-  background: url(/images/container-images/footer-patterns.svg);
+  background: url(./images/container-images/footer-patterns.svg);
   background-position: center;
   background-size: cover;
 }
@@ -667,21 +676,21 @@ div#cart {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  border-bottom: 1px solid #35b8be;
+  border-bottom: 1px solid var(--color-lightseagreen-100);
   padding-block: 1rem;
 }
 
 .cart-card h2,
 .cart-card h1 {
-  color: #35b8be;
-  font-family: Inter;
+  color: var( --color-lightseagreen-100);
+  font-family: var(--font-inter);
   margin-block: 1rem;
   font-size: 1.5rem;
   max-width: 10rem;
 }
 
 .cart-card button {
-  background-color: rgb(53, 184, 190);
+  background-color: var(--color-lightseagreen-100);
   outline: none;
   border: none;
   padding: 0.2rem 0.8rem;
@@ -701,12 +710,12 @@ div#cart {
 }
 
 .total-bill {
-  color: #1b9097;
+  color: var( --color-lightseagreen-100);
   transition: 0.5s;
 }
 
 .place_order {
-  background-color: #35b8be;
+  background-color:var( --color-lightseagreen-100) ;
   border: none;
   border-radius: 6px;
   color: #ddd;
@@ -823,7 +832,7 @@ div#cart {
   }
 
   .nav-links li a {
-    color: #08090a;
+    color: var(--color-gray-300);
     cursor: pointer;
   }
 
@@ -836,7 +845,7 @@ div#cart {
   /* Header */
   #header {
     position: relative;
-    background: url(/images/Bg-imges/Bg-1.svg);
+    background: url(./images/Bg-imges/Bg-1.svg);
     padding-bottom: 13rem;
     background-size: cover;
     background-color: #f5fbfc;
@@ -846,13 +855,13 @@ div#cart {
 
   #section-two {
     position: relative;
-    background: url(/images/Bg-imges/BG-2t.svg);
+    background: url(./images/Bg-imges/BG-2t.svg);
     padding-bottom: 10rem;
     background-size: cover;
   }
 
   div#section-two-content {
-    background: url(/images/sign.png);
+    background: url(./images/sign.png);
     background-position: center;
     background-size: 90%;
     background-repeat: no-repeat;
@@ -861,14 +870,14 @@ div#cart {
   /* section four */
 
   #section-four {
-    background: url(/images/Bg-imges/Bg-3.svg);
+    background: url(./images/Bg-imges/Bg-3.svg);
     background-size: cover;
   }
 
   /* section-six */
 
   #section-six {
-    background: url(/images/Bg-imges/bg-4.svg);
+    background: url(./images/Bg-imges/bg-4.svg);
     background-color: unset;
   }
 

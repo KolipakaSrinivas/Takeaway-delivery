@@ -1,3 +1,6 @@
+
+
+
 const mydata = [
   {
     id: 1,
@@ -6,7 +9,8 @@ const mydata = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     price: 9.2,
     image_url: "IMAGE-1.png",
-    count: 0
+    count: 0,
+    type :"Burger"
   },
   {
     id: 2,
@@ -15,7 +19,8 @@ const mydata = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     price: 10.0,
     image_url: "IMAGE-2.png",
-    count: 0
+    count: 0,
+    type :"Burger"
   },
   {
     id: 3,
@@ -24,7 +29,8 @@ const mydata = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     price: 8.0,
     image_url: "IMAGE-3.png",
-    count: 0
+    count: 0,
+    type :"Burger"
   },
   {
     id: 4,
@@ -33,7 +39,8 @@ const mydata = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     price: 9.99,
     image_url: "IMAGE-4.png",
-    count: 0
+    count: 0,
+    type :"Burger"
   },
   {
     id: 5,
@@ -42,7 +49,8 @@ const mydata = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     price: 9.2,
     image_url: "IMAGE-5.png",
-    count: 0
+    count: 0,
+    type :"Burger"
   },
   {
     id: 6,
@@ -51,7 +59,68 @@ const mydata = [
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
     price: 8.0,
     image_url: "IMAGE-6.png",
-    count: 0
+    count: 0,
+    type :"Burger"
+  },
+  {
+    id: 1,
+    name: "Burger Dreams",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 9.2,
+    image_url: "IMAGE-1.png",
+    count: 0,
+    type :"Burger"
+  },
+  {
+    id: 2,
+    name: "Burger Waldo",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 10.0,
+    image_url: "IMAGE-2.png",
+    count: 0,
+    type :"Burger"
+  },
+  {
+    id: 3,
+    name: "Burger Cali",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 8.0,
+    image_url: "IMAGE-3.png",
+    count: 0,
+    type :"Burger"
+  },
+  {
+    id: 4,
+    name: "Burger Bacon Buddy",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 9.99,
+    image_url: "IMAGE-4.png",
+    count: 0,
+    type :"Burger"
+  },
+  {
+    id: 5,
+    name: "Burger Spicy",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 9.2,
+    image_url: "IMAGE-5.png",
+    count: 0,
+    type :"Burger"
+  },
+  {
+    id: 6,
+    name: "Burger Classic",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+    price: 8.0,
+    image_url: "IMAGE-6.png",
+    count: 0,
+    type :"Burger"
   }
 ];
 
