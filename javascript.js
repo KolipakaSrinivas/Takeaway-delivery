@@ -346,12 +346,10 @@ function cartCardsRender(data) {
 
 function calculateTotalBill(data) {
   let totalBill = 0;
-  let cartItems = 0;
   data.forEach((item) => {
     let amount = 0;
     if (item.count > 0) {
       amount = item.price * item.count;
-      cartItems += item.count;
     }
     totalBill += amount;
   });
@@ -361,22 +359,33 @@ function calculateTotalBill(data) {
   } else {
     console.log();
   }
-  if (cartItems > 0) {
-    placeOrder();
-  }
+  placeOrder();
 }
+
 
 function placeOrder() {
   if (place_order !== null) {
-    place_order.addEventListener("click", function () {
+    place_order.addEventListener("click", order);
+  }
+
+  function order() {
+
+    const checkingData = localStorage.getItem("key");
+    const itemCheck = JSON.parse(checkingData).reduce((acc, cuurentCount) => {
+      return acc + cuurentCount.count;
+    }, 0);
+
+
+    if (itemCheck > 0) {
       if (window.confirm("Your Order Placed")) {
         removelocalStorage();
         location.reload();
         window.location.href = "../index.html";
       }
-    });
-  } else {
-    console.log();
+    }else {
+      alert("No Item in Cart")
+      window.location.href = "../index.html";
+    }
   }
 }
 

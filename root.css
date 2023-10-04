@@ -34,8 +34,6 @@
   --br-5xs: 8px;
 }
 
-
-
 /* Box sizing rules */
 *,
 *::before,
@@ -66,8 +64,8 @@ a {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -82,7 +80,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   /* background: #fff; */
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* A elements that don't have a class get default styles */
